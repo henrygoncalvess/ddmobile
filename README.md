@@ -4,7 +4,7 @@
   <br>
   <img width=50 src="https://github.com/user-attachments/assets/1d0e0547-99ec-485a-b2dc-31c82e6a8187">
   <br>
-  <a href="https://ddnet.org/downloads/"><img src="https://img.shields.io/badge/ddrace-network-6AC1FF?style=for-the-badge&labelColor=FFA500"></a><a href="https://ddnet.org/downloads/"><img src="https://img.shields.io/badge/mobile-4A9CE6?style=for-the-badge"></a>
+  <a href="https://ddnet.org/downloads/"><img src="https://img.shields.io/badge/ddrace-network-6AC1FF?style=for-the-badge&labelColor=FFA500"></a><a href="https://ddnet.org/downloads/"><img src="https://img.shields.io/badge/mobile-4A9CE6?style=for-the-badge"></a><a href="https://ddnet.org/downloads/"><img src="https://img.shields.io/badge/download-000000?style=for-the-badge"></a>
 </h1>
 
 Tutorial de como configurar e personalizar os controles do jogo mobile
