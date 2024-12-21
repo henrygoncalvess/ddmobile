@@ -15,6 +15,7 @@ Tutorial de como configurar e personalizar os controles do jogo mobile
 
 <br>
 
+<p name="tabela"></p>
 <details open="open">
 <summary>Tabela de Conteúdos</summary>
   
@@ -56,8 +57,35 @@ Tutorial de como configurar e personalizar os controles do jogo mobile
 
 <h2 name="custom-config">Configuração e Personalização dos botões</h2>
 
+Existem muitas maneiras de posicionar os botões na tela para se adaptar ao seu modo de jogo.  
+Logo abaixo você irá aprender a personalizar os botões da maneira que mais se encaixa com a sua jogabilidade.
+
 ### Entendendo os botões
-em andamento...
+Se você der uma olhada no [código](#codigo), vai perceber que abaixo de `"touch-buttons"`  
+todos os botões do jogo são separados por vírgula `,` após um par de chaves `{}`.  
+
+EXEMPLO:  
+
+``` json
+botão 1
+{ <-- primeiro par de chave
+  "x": 123456,
+  "y": 123,
+  "w": 12345,
+  "h": 1234,
+  "shape": "rect",
+  "visibilities": ["ingame"],
+  "behavior": {
+    "type": "bind",
+    "label": "LEGENDA DO BOTÃO",
+    "label-type": "localized",
+    "command": "COMANDO DO BOTÃO"
+  }
+}, <-- segundo par de chave e vírgula que indica a separação de outros botões
+{
+  ... outro comando
+}
+```
 
 #### `direct-touch`
 
@@ -83,7 +111,7 @@ em andamento...
 
 <br>
 
-[---VOLTAR---](#aplicação-dos-controles)
+[---VOLTAR---](#tabela)
 
 <p name="codigo"></p>
 
