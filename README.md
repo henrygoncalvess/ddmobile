@@ -23,11 +23,12 @@ Tutorial de como configurar e personalizar os controles do jogo mobile
 - [Aplicação dos controles](#aplicação-dos-controles)
 - [Configuração e Personalização dos botões](#custom-config)
   - [Entendendo os botões](#entendendo-os-botões)
-    - [direct-touch](#direct-touch)
-    - [x, y, w, h](#posicoes)
-    - [shape](#shape)
-    - [visibilities](#visibilities)
-    - [behavior, type, label, command, id](#behaviors)
+    - [Atributos](#atributos)
+      - [direct-touch](#direct-touch)
+      - [x, y, w, h](#posicoes)
+      - [shape](#shape)
+      - [visibilities](#visibilities)
+      - [behavior, type, label, command, id](#behaviors)
   - [Personalização](#personalização)
 - [Identificação de Erros](#erros)
   
@@ -61,7 +62,7 @@ Existem muitas maneiras de posicionar os botões na tela para se adaptar ao seu 
 Logo abaixo você irá aprender a personalizar os botões da maneira que mais se encaixa com a sua jogabilidade.
 
 ### Entendendo os botões
-Se você der uma olhada no [código](#codigo), vai perceber que abaixo de `"touch-buttons"`  
+Se você der uma olhada no [código](#codigo), vai perceber que abaixo de `"touch-buttons"` (linha 2)  
 todos os botões do jogo são separados por vírgula `,` após um par de chaves `{}`.  
 
 EXEMPLO:  
@@ -87,27 +88,47 @@ botão 1
 }
 ```
 
-#### `direct-touch`
+### Atributos
+
+Repare também que **dentro de todos os pares de chaves** `{}` estão armazenados os atributos dos botões (_que são responsáveis  
+pelo posicionamento do botão na tela, tamanho, texto etc._) Eles são identificados por:
+
+``` json
+"nome do atributo": "valor do atributo"
+```
+
+Cada atributo manipula o botão de uma forma diferente. Percebeu que todos os botões tem os atributos:  
+`"x"`, `"y"`, `"w"`, e `"h"`? isso acontece porquê esses atributos são responsáveis pelo pociocionamento,   
+altura e largura dos botões. Logo abaixo você irá aprender para quê cada atributo serve.
+
+#### `"direct-touch"`
+em andamento...
 
 <p name="posicoes"></p>
 
-#### `x, y, w, h`
+#### `"x", "y", "w", e "h"`
+em andamento...
 
-#### `shape`
+#### `"shape"`
+em andamento...
 
-#### `visibilities`
+#### `"visibilities"`
+em andamento...
 
 <p name="behaviors"></p>
 
-#### `behavior, type, label, command, id`
+#### `"behavior", "type", "label", "command", "id"`
+em andamento...
 
 <br>
 
 ## Personalização
+em andamento...
 
 <br>
 
 <h2 name="erros">Identificação de Erros</h2>
+em andamento...
 
 <br>
 
