@@ -112,7 +112,6 @@ altura e largura dos botões. Logo abaixo você irá aprender para quê cada atr
 ---
 
 ### `"direct-touch"`
-
 Este atributo é encontrado nas duas primeiras linhas após a primeira chave `{`.
 
 [---VER CODIGO---](#codigo)
@@ -146,8 +145,36 @@ VALORES DISPONÍVEIS | DESCRIÇÃO
 
 <p name="posicoes"></p>
 
+---
+
 ### `"x", "y", "w", e "h"`
-em andamento...
+Estes atributos são sempre os primeiros a aparecer dentro dos pares de chaves `{}`.
+
+[---VER CODIGO---](#codigo)
+
+``` json
+{
+  "x": 0,
+  "y": 0,
+  "w": 200000,
+  "h": 100000
+}
+```
+
+os atributos `"x", "y", "w", e "h"` são responsáveis por controlar a posição e o tamanho dos botões.
+
+> [!IMPORTANT]
+> os valores variam de acordo com largura e altura
+
+ATRIBUTO | MÍNIMO | MÁXIMO
+:--- | :---: | :---:
+`"x"` - eixo horizontal | 0 | variável
+`"y"` - eixo vertical | 0 | variável
+`"w"` - width (largura) | 50000 | 500000
+`"h"` - height (altura) | 50000 | 500000
+
+![2](https://github.com/user-attachments/assets/23c221b5-15d7-447c-898a-01bb25c0deb9) ![sla](https://github.com/user-attachments/assets/89e15d9a-25e1-40b4-864b-b0984dfa6c6b)
+
 
 ### `"shape"`
 em andamento...
