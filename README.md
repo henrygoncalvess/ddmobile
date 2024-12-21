@@ -54,6 +54,14 @@ Tutorial de como configurar e personalizar os controles do jogo mobile
 
 ![importar](https://github.com/user-attachments/assets/abaaa77b-f746-455f-abc8-1f572ca5dc38)
 
+#### Demonstração:
+
+https://github.com/user-attachments/assets/e175f945-754f-4655-9a6b-512a9b118fbe
+
+> [!CAUTION]
+> Leia [Identificação de Erros](erros) e [Entendendo os botões](#entendendo-os-botões)  
+> se der problema
+
 <br>
 
 <h2 name="custom-config">Configuração e Personalização dos botões</h2>
@@ -101,23 +109,55 @@ Cada atributo manipula o botão de uma forma diferente. Percebeu que todos os bo
 `"x"`, `"y"`, `"w"`, e `"h"`? isso acontece porquê esses atributos são responsáveis pelo pociocionamento,   
 altura e largura dos botões. Logo abaixo você irá aprender para quê cada atributo serve.
 
-#### `"direct-touch"`
-em andamento...
+---
+
+### `"direct-touch"`
+
+Este atributo é encontrado nas duas primeiras linhas após a primeira chave `{`.
+
+[---VER CODIGO---](#codigo)
+
+``` json
+{
+  "direct-touch-ingame": "disabled",
+  "direct-touch-spectate": "aim",
+  ...
+}
+```
+
+`"direct-touch-ingame"` é responsável por controlar o que vai acontecer se você tocar diretamente na tela  
+do celular durante o jogo
+
+VALORES DISPONÍVEIS | DESCRIÇÃO
+:---: | :---
+`"disabled"` | desabilitado
+`"action"` | ação ativa / executa a ação ativa no momento (_padrão: atirar_)
+`"aim"` | mira
+`"fire"` | atirar / bater
+`"hook"` | gancho / enganchar
+
+`"direct-touch-spectate"` é responsável por controlar o que vai acontecer se você tocar diretamente na tela  
+do celular quando estiver no modo **pause** ou **espectador**
+
+VALORES DISPONÍVEIS | DESCRIÇÃO
+:---: | :---
+`"disabled"` | desabilitado
+`"aim"` | mira - permite movimentar a tela
 
 <p name="posicoes"></p>
 
-#### `"x", "y", "w", e "h"`
+### `"x", "y", "w", e "h"`
 em andamento...
 
-#### `"shape"`
+### `"shape"`
 em andamento...
 
-#### `"visibilities"`
+### `"visibilities"`
 em andamento...
 
 <p name="behaviors"></p>
 
-#### `"behavior", "type", "label", "command", "id"`
+### `"behavior", "type", "label", "command", "id"`
 em andamento...
 
 <br>
