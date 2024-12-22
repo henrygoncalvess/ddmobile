@@ -175,12 +175,50 @@ ATRIBUTO | MÍNIMO | MÁXIMO
 
 ![2](https://github.com/user-attachments/assets/23c221b5-15d7-447c-898a-01bb25c0deb9) ![sla](https://github.com/user-attachments/assets/89e15d9a-25e1-40b4-864b-b0984dfa6c6b)
 
+---
 
 ### `"shape"`
-em andamento...
+encontrado logo após os atributos de posições, `"shape"` é responsável por definir o formato do botão.
+
+[---VER CODIGO---](#codigo)
+
+``` json
+{
+  ...
+  "w": 200000,
+  "h": 100000,
+  "shape": "rect"
+}
+```
+
+VALORES DISPONÍVEIS | DESCRIÇÃO
+:---: | :---
+`"rect"` | retângulo
+`"circle"` | círculo
+
+---
 
 ### `"visibilities"`
-em andamento...
+abaixo de `shape`, `"visibilities"` é responsável por controlar a exibição dos botões e a visão do jogador
+[---VER CODIGO---](#codigo)
+
+``` json
+{
+  "visibilities": ["ingame"]
+}
+```
+
+VALORES DISPONÍVEIS | DESCRIÇÃO
+:--- | :---
+`"ingame"` | botão visível
+`"zoom-allowed"` | em andamento...
+`"vote-active"` | em andamento...
+`"dummy-allowed"` | em andamento...
+`"dummy-connected"` | em andamento...
+`"rcon-authed"` | em andamento...
+`"demo-player"` | em andamento...
+`"extra-menu"` | em andamento...
+`"extra-menu-2"` ao `"extra-menu-5"` | em andamento...
 
 <p name="behaviors"></p>
 
@@ -190,13 +228,104 @@ em andamento...
 <br>
 
 ## Personalização
-em andamento...
+Para personalizar, adicionar ou remover um botão:
+
+#### 1. Copie o [código](#codigo) e cole em qualquer editor de texto de sua preferência,  
+como o próprio bloco de notas do seu celular, por exemplo.
+
+#### 2. Personalize
+Adicione, remova, ou personalize os botões da maneira que desejar, mas sempre seguindo uma estrutura correta.
+
+> [!TIP]
+> Leia [Entendendo os botões](#entendendo-os-botões) para editar corretamente
+
+A regra para adicionar ou remover um botão é simples.  
+Todos os botões são reconhecidos por um par de chaves `{}` logo depois de `touch-buttons`.
+
+EXEMPLO:
+
+``` json
+{
+  botão 1
+  "x": 123456,
+  "y": 123,
+  "w": 12345,
+  "h": 1234,
+  "shape": "rect",
+  "visibilities": ["ingame"],
+  "behavior": {
+    "type": "bind",
+    "label": "LEGENDA DO BOTÃO",
+    "label-type": "localized",
+    "command": "COMANDO DO BOTÃO"
+  }
+}, <- vírgula que separa um botão de outro
+{
+  botão 2
+  "x": 123456,
+  "y": 123,
+  .....
+}
+```
+
+Como você pode ver, para adicionar um botão é só colocar uma vírgula ao final de um par de chaves `{}`  
+e respeitar as configurações para personalizá-lo
+
+Para remover um botão, apague o par de chaves `{}` e as configurações dentro dele, incluindo a vírgula
+
+#### 3. Quando terminar de personalizar, copie novamente seu código e siga os passos de --> [Aplicação dos controles](#aplicação-dos-controles)
 
 <br>
 
 <h2 name="erros">Identificação de Erros</h2>
-em andamento...
+Se você tentou importar suas configurações de controle e recebeu um erro como este:  
 
+![erro](https://github.com/user-attachments/assets/1dc8bb35-01a5-4d6a-99ea-8bd8d318dd29)
+
+#### 1. Abra o menu e selecione a opção **`console`**
+
+![console](https://github.com/user-attachments/assets/7b1a1dae-c429-4b33-b686-a7aec118f336)
+
+O problema vai aparecer na mensagem mais recente
+
+EXEMPLO:  
+
+![desc-erro](https://github.com/user-attachments/assets/104f6894-5a55-4933-97b0-d0dd36ed5d9e)
+
+_Tradução:_ falha ao analisar o botão de toque: o atributo `"w"` deve especificar um número inteiro entre 50000 e 500000.  
+
+Assim como foi explicado em -> [Entendendo os botões](#entendendo-os-botões), o atributo responsável pela largura do botão `"w"`,  
+deve ter um valor entre 50000 e 500000.
+
+Então nesse caso, para resolver o problema, basta acessar o texto do código e alterar para um valor válido.  
+Mas caso o motivo do erro seja outro, é só olhar o console e ler a mensagem para saber como resolver o problema.
+
+> [!NOTE]
+> repare que a mensagem diz "_could not parse button at index 0_" - Tradução: "não foi possível analisar o botão no índice 0"
+
+Isso acontece porquê todos os botões possuem um índice / posição. O índice / posição do botão, nos ajuda a  
+entender aonde se encontra o erro
+
+``` json
+{
+  índice 0
+  "atributo-exemplo": "valor-exemplo"
+},
+{
+  índice 1
+  "atributo-exemplo": "valor-exemplo"
+},
+{
+  índice 2
+  "atributo-exemplo": "valor-exemplo"
+},
+...
+```
+
+De acordo com essa regra, o meu problema de exemplo se encontraria dentro do primeiro par de chaves `{}` logo  
+abaixo de `"touch-buttons"` no código, pois este par de chaves que é o **índice 0** 
+
+<br>
 <br>
 
 [---VOLTAR---](#tabela)
